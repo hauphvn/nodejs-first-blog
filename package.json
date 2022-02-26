@@ -4,12 +4,13 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "nice": "lint-staged",
     "watch": "node-sass --watch src/resource/scss/app.scss src/public/css/app.css",
     "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "src": "prettier --single-quote --tab-width 2 --trailing-comma all --write "
+    "*.js": "prettier --single-quote --tab-width 2 --trailing-comma all --write src"
   },
   "husky": {
     "hooks": {
